@@ -1,0 +1,73 @@
+h1.name
+{
+	font-family: Helvetica;
+	color: rgb(237, 20, 20);
+	font-size: 64px;
+	position: fixed;
+	transform: translateX(-100%) rotate(-90deg);
+	transform-origin: right;
+	left: 30px;
+	top: 30px;
+}
+
+h1.bio
+{
+	font-family: Helvetica;
+	color: rgb(237, 20, 20);
+	font-size: 64px;
+	position: relative;
+	left: 960px;
+	top: 0px;
+	margin: 0px;
+	width: 100px;
+}
+
+html
+{
+	background-color: #e6e6e6e7;
+}
+
+p.bio
+{
+	font-family: Helvetica;
+	position: relative;
+	left: 50px;
+	margin: 0px;
+	width: 1000px;
+}
+
+h1.sites
+{
+	font-family: Helvetica;
+	color: rgb(237, 20, 20);
+	position: relative;
+	left: 500px;
+	top: 100px;
+	width: 300px;
+}
+
+#list
+{
+	font-family: Helvetica;
+	position: relative;
+	left: 500px;
+	top: 80px;
+	width: 300px;
+}
+
+a
+{
+	color: rgb(237, 20, 20)
+}
+a:visited, a:active
+ {
+	color: rgb(145, 4, 4);
+}
+
+iframe
+{
+	position: relative;
+	left: 900px;
+	border-color: rgb(237, 20, 20);
+	border-width: 15px;
+}

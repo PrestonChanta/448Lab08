@@ -1,0 +1,87 @@
+h1, p, div
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h1.title
+{
+    text-align: center;
+    font-size: large;
+}
+
+div
+{
+    cursor: pointer;
+}
+
+#drag1
+{
+    position: absolute;
+    text-align: center;
+    font-size: smaller;
+    border-width: 1px; 
+    border-color: white;
+    border-style: dotted;
+}
+
+#drag2
+{
+    position: absolute;
+    text-align: center;
+    font-size: smaller;
+    border-width: 1px; 
+    border-color: white;
+    border-style: dotted;
+}
+#drag3
+{
+    position: absolute;
+    text-align: center;
+    font-size: smaller;
+    border-width: 1px; 
+    border-color: white;
+    border-style: dotted;
+}
+#drag4
+{
+    position: absolute;
+    text-align: center;
+    font-size: smaller;
+    border-width: 1px; 
+    border-color: white;
+    border-style: dotted;
+}
+#web
+{
+    width: 64px;
+    height: 64px;
+}
+
+div.website1
+{
+    position: relative;
+    top: 453px;
+    left: 500px;
+}
+
+div.website2
+{
+    position: relative;
+    top: 365px;
+    left: 725px;
+}
+
+div.website3
+{
+    position: relative;
+    top: 345px;
+    left: 1000px;
+}
+
+div.website4
+{
+    position: relative;
+    top: 365px;
+    left: 1043px;
+}

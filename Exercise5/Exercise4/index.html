@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8">
+        <title>CSS Manipulation</title>
+    </head>
+    <body>
+        
+        <p id="manipulate" style="border: 0px solid white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat. Purus viverra accumsan in nisl. Nullam vehicula ipsum a arcu cursus. Consequat id porta nibh venenatis cras. Senectus et netus et malesuada fames ac. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Justo donec enim diam vulputate ut pharetra. Eu mi bibendum neque egestas. Turpis in eu mi bibendum neque egestas. Ultrices dui sapien eget mi proin. A lacus vestibulum sed arcu non odio. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Nulla pharetra diam sit amet nisl. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Congue quisque egestas diam in arcu. Sed enim ut sem viverra aliquet eget sit. Tellus molestie nunc non blandit massa enim nec dui.</p>
+        <form>
+            <h3>Border</h3>
+            Red Value: <input type="text" placeholder="0-255" id="rBorder">
+            Green Value: <input type="text" placeholder="0-255" id="gBorder">
+            Blue Value: <input type="text" placeholder="0-255" id="bBorder">
+            Width: <input type="text" placeholder="using px" id="wBorder">
+        </form>
+
+        <form>
+            <h3>Background Color</h3>
+            Red Value: <input type="text" placeholder="0-255" id="rBack">
+            Green Value: <input type="text" placeholder="0-255" id="gBack">
+            Blue Value: <input type="text" placeholder="0-255" id="bBack">
+        </form>
+        <br>
+        <input type="button" value="Change" onclick="changeColor()">        
+    </body>
+    <script>
+        function changeColor()
+        {
+            let rBorder = document.getElementById('rBorder').value;
+            let gBorder = document.getElementById('gBorder').value;
+            let bBorder = document.getElementById('bBorder').value;
+            let wBorder = document.getElementById('wBorder').value;
+
+            let rBack = document.getElementById('rBack').value;
+            let gBack = document.getElementById('gBack').value;
+            let bBack = document.getElementById('bBack').value;
+
+            let valid = false;
+            
+            if(rBorder >= 0 && rBorder <= 255 && gBorder >= 0 && gBorder <= 255 && bBorder >= 0 && bBorder <= 255)
+            {
+                if(wBorder >= 0)
+                {
+                    if(rBack >= 0 && rBack <= 255 && gBack >= 0 && gBack <= 255 && bBack >= 0 && bBack <= 255)
+                    {
+                        valid = true;
+                    }
+                    else
+                    {
+                        alert("One or more RGB background values is not in 0-255 range. Try again.");
+                    }
+                }
+                else
+                {
+                    alert("Width is not a positive int. Try again.")
+                }
+            }
+            else
+            {
+                alert("One or more RGB border values is not in 0-255 range. Try again.");
+            }
+            
+            if(valid)
+            {
+                let paragraph = document.getElementById('manipulate');
+                let border = "rgb(" + rBorder + "," + gBorder + "," + bBorder + ")";
+                let background = "rgb(" + rBack + "," + gBack + "," + bBack + ")";
+                let width = wBorder+"px";
+
+                paragraph.style.borderWidth = width;
+                paragraph.style.borderColor = border;
+                paragraph.style.backgroundColor = background;
+            }
+            
+        }
+    </script>
+</html>

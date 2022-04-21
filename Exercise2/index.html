@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8">
+        <title>Slide Show</title>
+    </head>
+    <body>
+        <img src="cat1.jpeg" id="catImg" width=556 height=557 class="center"> 
+        <div class="centerDiv">
+            <input type="button" value="Previous" onclick="previous()"></input>
+            <input type="button" value="Next" onclick="next()"></input>
+        </div>
+    </body>
+    <script>
+        let num = 1;
+        function cat(num)
+        {
+            return('cat' + num + '.jpeg');
+        }
+
+        function previous()
+        {
+            let catImg = document.getElementById('catImg');
+            
+            if(num != 1)
+            {
+                catImg.src = cat(num-1);
+                if(num-1 == 0)
+                {
+                    num = 5;
+                }
+                else
+                {
+                    num--;
+                }
+            }
+            else
+            {
+                catImg.src = cat(5);
+                num = 5;
+            }
+        }
+
+        function next()
+        {
+            let catImg = document.getElementById('catImg');
+
+            if(num != 5)
+            {
+                catImg.src = cat(num+1);
+                if(num+1 == 6)
+                {
+                    num = 1;
+                }
+                else
+                {
+                    num++;
+                }
+            }
+            else
+            {
+                catImg.src = cat(1);
+                num = 1;
+            }
+        }
+    </script>
+    <style>
+        .center 
+        {
+            display: block;
+            margin: auto;
+            padding: 10px;
+        }    
+        .centerDiv 
+        {
+            position: absolute;
+            left: 46%;
+        }
+    </style>
+</html>

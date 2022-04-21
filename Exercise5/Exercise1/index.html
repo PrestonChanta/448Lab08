@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8">
+        <title>Password Validator</title>
+    </head>
+    <body>
+        <p>Enter Password: <input type="password" id="firstWord"></p>
+        <a>Re-enter Password: <input type="password" id="secondWord"></a> <span id="message"></span>
+        <br>
+        <button onclick="validate()">Validate</button>
+    </body>
+    <script>
+        function validate()
+        {
+            let firstInput = document.getElementById('firstWord').value;
+            let secondInput = document.getElementById('secondWord').value;
+            if (firstInput != secondInput)
+            {
+                document.getElementById('firstWord').style.borderColor = "red";
+                document.getElementById('secondWord').style.borderColor = "red";
+                
+                let message = document.getElementById('message');
+                message.textContent = "Passwords do not match. Try again.";
+                message.style.color = "red";
+            }
+            else if (firstInput.length < 8)
+            {
+                document.getElementById('firstWord').style.borderColor = "red";
+                document.getElementById('secondWord').style.borderColor = "red";
+
+                let message = document.getElementById('message');
+                message.textContent = "Passwords need to be at least 8 characters. Try again.";
+                message.style.color = "red";
+            }
+            else
+            {
+                document.getElementById('firstWord').style.borderColor = "green";
+                document.getElementById('secondWord').style.borderColor = "green";
+
+                let message = document.getElementById('message');
+                message.textContent = "Password is valid.";
+                message.style.color = "green";
+            }
+        }
+    </script>
+</html>
